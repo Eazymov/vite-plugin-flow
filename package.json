@@ -1,0 +1,64 @@
+{
+  "name": "vite-plugin-flow",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Flow support for Vite",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "keywords": [
+    "vite",
+    "flow",
+    "plugin",
+    "esbuild",
+    "javascript"
+  ],
+  "author": "Eduard Troshin <eazymovcode@gmail.com>",
+  "maintainers": [
+    "Eazymov <eazymovcode@gmail.com>"
+  ],
+  "homepage": "https://github.com/Eazymov/vite-plugin-flow#readme",
+  "registry": "github",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eazymov/vite-plugin-flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eazymov/vite-plugin-flow/issues"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:staged": "lint-staged",
+    "prettier": "prettier \"./**/*.{js,json,md}\"",
+    "prettier:check": "yarn prettier --check",
+    "prettier:write": "yarn prettier --write",
+    "flow": "flow check",
+    "test": "yarn build && vite build test/vite-project",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --copy-files --out-dir dist/cjs && flow-copy-source src dist/cjs",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --copy-files --out-dir dist/esm && flow-copy-source src dist/esm"
+  },
+  "dependencies": {
+    "flow-remove-types": "2.168.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.5",
+    "@babel/eslint-parser": "7.16.5",
+    "@babel/plugin-transform-modules-commonjs": "7.16.5",
+    "@babel/preset-flow": "7.16.5",
+    "cross-env": "7.0.3",
+    "eslint": "8.5.0",
+    "eslint-plugin-flowtype": "8.0.3",
+    "flow-bin": "0.168.0",
+    "flow-copy-source": "2.0.9",
+    "husky": "4.3.8",
+    "lint-staged": "12.1.4",
+    "prettier": "2.5.1",
+    "vite": "2.7.2"
+  }
+}
