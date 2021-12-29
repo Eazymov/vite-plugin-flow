@@ -41,7 +41,8 @@
     "test": "yarn build && vite build test/vite-project",
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --copy-files --out-dir dist/cjs && flow-copy-source src dist/cjs",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --copy-files --out-dir dist/esm && flow-copy-source src dist/esm"
+    "build:esm": "cross-env BABEL_ENV=esm babel src --copy-files --out-dir dist/esm && flow-copy-source src dist/esm",
+    "publish": "yarn build && npm publish"
   },
   "dependencies": {
     "flow-remove-types": "2.168.0"
