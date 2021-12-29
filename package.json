@@ -10,7 +10,8 @@
     "flow",
     "plugin",
     "esbuild",
-    "javascript"
+    "javascript",
+    "vite-plugin"
   ],
   "author": "Eduard Troshin <eazymovcode@gmail.com>",
   "maintainers": [
