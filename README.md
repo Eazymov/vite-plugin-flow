@@ -8,16 +8,15 @@
 
 ## Installation
 
-### NPM
-
 ```bash
-npm install vite-plugin-flow --save
-```
+# npm
+npm i vite-plugin-flow -D
 
-### Yarn
+# yarn
+yarn add vite-plugin-flow -D
 
-```bash
-yarn add vite-plugin-flow
+# pnpm
+pnpm add vite-plugin-flow -D
 ```
 
 ```javascript
@@ -65,6 +64,4 @@ If you have any troubles, questions or proposals you can create the [issue](http
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2021 - present, Eazymov
+[MIT](http://opensource.org/licenses/MIT) (c) 2021 - present, [Eazymov](https://github.com/Eazymov)
