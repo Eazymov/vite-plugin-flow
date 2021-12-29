@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-flow",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "Flow support for Vite",
   "main": "dist/cjs/index.js",
